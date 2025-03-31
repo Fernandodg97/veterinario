@@ -1,6 +1,7 @@
 package net.xeill.elpuig.veterinario.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import net.xeill.elpuig.veterinario.model.*;
 import net.xeill.elpuig.veterinario.service.*;
@@ -25,4 +26,10 @@ public class UsuarioController {
     public Usuario obtenerUsuario(@PathVariable String email) {
         return usuarioService.obtenerUsuarioPorEmail(email);
     }
+
+    @GetMapping
+    public ResponseEntity<String> obtenerUsuarios() {
+        return ResponseEntity.ok("Lista de usuarios");
+    }
+
 }

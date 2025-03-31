@@ -13,8 +13,7 @@ public class UsuarioModel {
     private String nombre;
     private String apellido;
     private String email;
-
-    
+    private String numero_cuenta;
 
     // Constructor vacío (necesario para Couchbase y frameworks como Spring)
     public UsuarioModel() {
@@ -22,11 +21,12 @@ public class UsuarioModel {
     }
 
     // Constructor con parámetros
-    public UsuarioModel(String id, String nombre, String apellido, String email) {
+    public UsuarioModel(String id, String nombre, String apellido, String email, String numero_cuenta) {
         this.id = UUID.randomUUID().toString();
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
+        this.numero_cuenta = numero_cuenta;
     }
 
     // Getters y setters
@@ -62,14 +62,23 @@ public class UsuarioModel {
         this.email = email;
     }
 
+    public String getNumeroCuenta() {
+        return numero_cuenta;
+    }
+
+    public void setNumeroCuenta(String numero_cuenta) {
+        this.numero_cuenta = numero_cuenta;
+    }
+
     // Método toString para depuración
     @Override
     public String toString() {
-        return "Usuario{" +
+        return "UsuarioModel{" +
                 "id='" + id + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", email='" + email + '\'' +
+                ", numero_cuenta='" + numero_cuenta + '\'' +
                 '}';
     }
 }

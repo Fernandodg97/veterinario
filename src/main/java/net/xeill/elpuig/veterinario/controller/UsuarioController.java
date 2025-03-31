@@ -1,5 +1,7 @@
 package net.xeill.elpuig.veterinario.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,8 +30,9 @@ public class UsuarioController {
     }
 
     @GetMapping
-    public ResponseEntity<String> obtenerUsuarios() {
-        return ResponseEntity.ok("Lista de usuarios");
+    public ResponseEntity<List<UsuarioModel>> obtenerTodosUsuarios() {
+        List<UsuarioModel> usuarios = usuarioService.obtenerUsuarios(); 
+        return ResponseEntity.ok(usuarios);
     }
 
 }

@@ -9,7 +9,8 @@ import net.xeill.elpuig.veterinario.model.*;
 import net.xeill.elpuig.veterinario.service.*;
 
 @RestController
-@RequestMapping("/usuarios")
+@CrossOrigin(origins = "http://192.168.253.131")
+@RequestMapping("/api/usuarios")
 public class UsuarioController {
 
     private final UsuarioService usuarioService;

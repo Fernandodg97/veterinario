@@ -18,12 +18,12 @@ public class UsuarioController {
     }
 
     @PostMapping
-    public Usuario crearUsuario(@RequestBody Usuario usuario) {
+    public UsuarioModel crearUsuario(@RequestBody UsuarioModel usuario) {
         return usuarioService.guardarUsuario(usuario);
     }
 
     @GetMapping("/{email}")
-    public Usuario obtenerUsuario(@PathVariable String email) {
+    public UsuarioModel obtenerUsuario(@PathVariable String email) {
         return usuarioService.obtenerUsuarioPorEmail(email);
     }
 

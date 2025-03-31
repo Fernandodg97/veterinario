@@ -7,7 +7,7 @@ import java.util.UUID;
 import org.springframework.data.annotation.Id;
 
 @Document
-public class Usuario {
+public class UsuarioModel {
     @Id
     private String id;
     private String nombre;
@@ -17,12 +17,12 @@ public class Usuario {
     
 
     // Constructor vacío (necesario para Couchbase y frameworks como Spring)
-    public Usuario() {
+    public UsuarioModel() {
         this.id = UUID.randomUUID().toString();
     }
 
     // Constructor con parámetros
-    public Usuario(String id, String nombre, String apellido, String email) {
+    public UsuarioModel(String id, String nombre, String apellido, String email) {
         this.id = UUID.randomUUID().toString();
         this.nombre = nombre;
         this.apellido = apellido;

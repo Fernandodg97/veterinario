@@ -14,11 +14,11 @@ public class UsuarioService {
         this.usuarioRepository = usuarioRepository;
     }
 
-    public Usuario guardarUsuario(Usuario usuario) {
+    public UsuarioModel guardarUsuario(UsuarioModel usuario) {
         return usuarioRepository.save(usuario);
     }
 
-    public Usuario obtenerUsuarioPorEmail(String email) {
+    public UsuarioModel obtenerUsuarioPorEmail(String email) {
         return usuarioRepository.findByEmail(email);
     }
 

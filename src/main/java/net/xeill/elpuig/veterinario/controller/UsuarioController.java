@@ -31,12 +31,6 @@ public class UsuarioController {
         return usuarioService.obtenerUsuarioPorId(id); // Llama al servicio para obtener un usuario por su ID.
     }
 
-    // Obtener un usuario por su correo electrónico
-    @GetMapping("/{email}") // Método que maneja solicitudes GET para obtener un usuario por su correo electrónico.
-    public UsuarioModel obtenerUsuarioEmail(@PathVariable String email) {
-        return usuarioService.obtenerUsuarioPorEmail(email); // Llama al servicio para obtener el usuario por email.
-    }
-
     // Obtener todos los usuarios
     @GetMapping // Método que maneja solicitudes GET para obtener todos los usuarios.
     public ResponseEntity<List<UsuarioModel>> obtenerTodosUsuarios() {

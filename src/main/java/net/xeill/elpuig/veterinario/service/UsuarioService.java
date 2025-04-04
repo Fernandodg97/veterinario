@@ -37,11 +37,6 @@ public class UsuarioService {
         return usuario.orElse(null); // Retorna el usuario si lo encuentra, sino null
     }
 
-    // Obtener un usuario por su email
-    public UsuarioModel obtenerUsuarioPorEmail(String email) {
-        return usuarioRepository.findByEmail(email);
-    }
-
     // Obtener todos los usuarios
     public List<UsuarioModel> obtenerUsuarios() {
         return usuarioRepository.findAll();

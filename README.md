@@ -176,9 +176,6 @@ Content-Type: application/json
 ## 👨‍💻 Autores
 - [@Fernandodg97](https://github.com/Fernandodg97)
 - [@Msedjari10](https://github.com/Msedjari10)
-Este proyecto es parte de un sistema de gestión veterinaria de ejemplo.  
-Desarrollado con ❤️ usando Spring Boot + Couchbase.
-
 ---
 
 ## 📄 Licencia

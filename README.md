@@ -1,6 +1,6 @@
 
 
-# 🐾 Proyecto Veterinario
+# 🐾 Proyecto Veterinario Backend
 
 Aplicación backend para la gestión de usuarios, mascotas y tratamientos veterinarios, desarrollada con **Spring Boot 3.4.4**, **Java 21** y **Couchbase** como base de datos NoSQL.
 

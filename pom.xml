@@ -1,69 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>net.xeill.elpuig</groupId>
-	<artifactId>veterinario</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
-	<name>veterinario</name>
-	<description>Prueba de uso de Couchbase</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
-	<properties>
-		<java.version>21</java.version>
-	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-couchbase</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+    <!-- Versión del modelo de POM -->
+    <modelVersion>4.0.0</modelVersion>
 
+    <!-- Definición del proyecto principal (padre) de Spring Boot -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>  <!-- El grupo de Spring Boot -->
+        <artifactId>spring-boot-starter-parent</artifactId> <!-- Artefacto padre para la configuración básica -->
+        <version>3.4.4</version> <!-- Versión de Spring Boot -->
+        <relativePath/> <!-- Ruta relativa al archivo POM del proyecto padre -->
+    </parent>
+
+    <!-- Información del proyecto -->
+    <groupId>net.xeill.elpuig</groupId> <!-- El grupo del proyecto -->
+    <artifactId>veterinario</artifactId> <!-- El identificador del artefacto -->
+    <version>0.0.1-SNAPSHOT</version> <!-- Versión del proyecto -->
+    <packaging>war</packaging> <!-- Tipo de empaquetado: WAR (Web ARchive) -->
+    <name>veterinario</name> <!-- Nombre del proyecto -->
+    <description>Prueba de uso de Couchbase</description> <!-- Descripción del proyecto -->
+
+    <!-- Propiedades generales del proyecto -->
+    <properties>
+        <java.version>21</java.version> <!-- Versión de Java que se está utilizando -->
+    </properties>
+
+    <!-- Dependencias del proyecto -->
+    <dependencies>
+        <!-- Dependencia para usar Couchbase con Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-couchbase</artifactId> <!-- Starter para integración con Couchbase -->
+        </dependency>
+
+        <!-- Dependencia para usar Spring MVC y exponer un API web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId> <!-- Starter para crear aplicaciones web -->
+        </dependency>
+
+        <!-- Dependencia para herramientas de desarrollo en tiempo de ejecución (DevTools) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId> <!-- DevTools para desarrollo más rápido -->
+            <scope>runtime</scope> <!-- Solo se usa en tiempo de ejecución -->
+            <optional>true</optional> <!-- Indicando que es opcional -->
+        </dependency>
+
+        <!-- Dependencia para utilizar Tomcat como el servidor embebido -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId> <!-- Tomcat como servidor embebido -->
+            <scope>provided</scope> <!-- El servidor será proporcionado por el contenedor de la aplicación -->
+        </dependency>
+
+        <!-- Dependencia para realizar pruebas -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId> <!-- Starter para testing de Spring Boot -->
+            <scope>test</scope> <!-- Solo se usa en el ámbito de las pruebas -->
+        </dependency>
+    </dependencies>
+
+    <!-- Plugins para el proyecto -->
+    <build>
+        <plugins>
+            <!-- Plugin para empaquetar la aplicación con Spring Boot -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId> <!-- Grupo del plugin -->
+                <artifactId>spring-boot-maven-plugin</artifactId> <!-- Plugin para empaquetar con Spring Boot -->
+            </plugin>
+        </plugins>
+    </build>
 </project>
